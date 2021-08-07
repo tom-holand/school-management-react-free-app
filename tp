@@ -1,0 +1,10 @@
+const [school, setSchool] = useState({
+    name: "",
+    address: "",
+    pincode: "",  
+    telphone: "",
+    mobile: "",
+    contactPerson: ""
+  });
+
+  const { name, address, pincode, telephone, mobile, contactPerson } = school;
