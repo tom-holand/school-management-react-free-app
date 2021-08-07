@@ -25,7 +25,7 @@ const EditSchool = () => {
 
   useEffect(() => {
 
-    Axios.get("http://localhost:3001/getdata/" + id).then((res) => {
+    Axios.get("https://school-management-free-app.herokuapp.com/getdata/" + id).then((res) => {
       setName(res.data[0].V_School_Name);
       setAddress(res.data[0].V_School_Address);
       setPincode(res.data[0].N_School_Pincode);
@@ -66,7 +66,7 @@ const EditSchool = () => {
     };
 
     console.log(SchoolData)
-    Axios.put("http://localhost:3001/updatedata/" + id, SchoolData).then(
+    Axios.put("https://school-management-free-app.herokuapp.com/updatedata/" + id, SchoolData).then(
       (response) => {
         alert("Data Updated");
         history.replace("/");

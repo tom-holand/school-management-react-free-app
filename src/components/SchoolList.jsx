@@ -10,7 +10,7 @@ const SchoolList = () => {
   }, []);
 
   const GetDataHandler = () => {
-    Axios.get("http://localhost:3001/getdata").then((response) => {
+    Axios.get("https://school-management-free-app.herokuapp.com/getdata").then((response) => {
       setDataList(response.data);
     });
   };
@@ -18,7 +18,7 @@ const SchoolList = () => {
   const DeleteDataHandler = (id) => {
     let x = window.confirm("Are you Sure you want to delete");
     if (x === true) {
-      Axios.delete("http://localhost:3001/datadelete/" + id).then((res) => {
+      Axios.delete("https://school-management-free-app.herokuapp.com/datadelete/" + id).then((res) => {
         GetDataHandler();
       });
     } else {

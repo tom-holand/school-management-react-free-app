@@ -30,7 +30,7 @@ const CreateSchool = () => {
 
       console.log(pincode)
 
-      Axios.get("http://localhost:3001/pincode/" + pincode).then(
+      Axios.get("https://school-management-free-app.herokuapp.com/pincode/" + pincode).then(
       (response) => {
         console.log(response.data)
         console.log(response.data.V_PostOffice_State)
@@ -58,7 +58,7 @@ const CreateSchool = () => {
 
     console.log(isNotEmpty("sajsajs"))
 
-    Axios.post("http://localhost:3001/postdata", SchoolData).then(
+    Axios.post("https://school-management-free-app.herokuapp.com/postdata", SchoolData).then(
       (response) => {
         history.replace("/");
       }
